@@ -26,8 +26,6 @@
     const __output: string[] = []
     const code = $jsCode
 
-    console.log(__input)
-    console.log(code)
     try {
       eval(code);
     } catch (e) {
