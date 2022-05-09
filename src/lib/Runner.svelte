@@ -16,7 +16,7 @@
 
   const JavaScript = Blockly['JavaScript']
 
-  JavaScript.addReservedWords('Blockly,JavaScript,jsCode,inputStr,outputStr,input,output,console,document,window')
+  JavaScript.addReservedWords('Blockly,JavaScript,jsCode,inputStr,outputStr,console,document,window')
 
   let inputStr: string = ''
   let outputStr = ''
