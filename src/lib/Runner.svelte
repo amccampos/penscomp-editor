@@ -16,18 +16,14 @@
 
   const JavaScript = Blockly['JavaScript']
 
-  JavaScript.addReservedWords('Blockly')
-  JavaScript.addReservedWords('JavaScript')
-  JavaScript.addReservedWords('jsCode')
+  JavaScript.addReservedWords('Blockly,JavaScript,jsCode,inputStr,outputStr,input,output,console,document,window')
 
   let inputStr: string = ''
   let outputStr = ''
 
   function showCode() {
-    console.log($jsCode)
     const input: string[] = inputStr.split('\n')
     const output: string[] = []
-    console.log(input)
 
     try {
       eval($jsCode);
@@ -35,8 +31,6 @@
       console.error(e);
     }
     outputStr = output.join('\n')
-    console.log(output)
-    console.log(outputStr)
   }
 </script>
 
