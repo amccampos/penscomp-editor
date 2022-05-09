@@ -22,9 +22,9 @@
   let outputStr = ''
 
   function runCode() {
-    const __input: string[] = inputStr.split('\n')
+    const __input: string[] = inputStr.split('\n').map(val => `"${val}"` )
     const __output: string[] = []
-    const code = $jsCode
+    const code = `const __input = [${__input}];\n` + $jsCode
 
     try {
       eval(code);
