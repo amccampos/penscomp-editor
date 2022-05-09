@@ -19,6 +19,6 @@ blPy['io_input_line'] = function() {
 
 const Js = Blockly['JavaScript']
 Js['io_input_line'] = function() {
-  const code = '(input.shift())?.trim()'
+  const code = '(__input.shift())?.trim()'
   return [code, Js.ORDER_NONE];
 }

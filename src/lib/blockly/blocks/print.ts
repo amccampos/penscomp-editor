@@ -28,6 +28,6 @@ blPy['io_print'] = function(block) {
 const Js = Blockly['JavaScript']
 Js['io_print'] = function(block) {
   var value_name = Js.valueToCode(block, 'VALUE', Js.ORDER_ATOMIC);
-  var code = `output.push(${value_name});\n`;
+  var code = `__output.push(${value_name});\n`;
   return code;
 }

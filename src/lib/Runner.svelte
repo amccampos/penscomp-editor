@@ -1,4 +1,4 @@
-<button class="button is-light" on:click={ showCode }>
+<button class="button is-light" on:click={ runCode }>
   Executa
 </button>
 <div class="content">
@@ -21,16 +21,19 @@
   let inputStr: string = ''
   let outputStr = ''
 
-  function showCode() {
-    const input: string[] = inputStr.split('\n')
-    const output: string[] = []
+  function runCode() {
+    const __input: string[] = inputStr.split('\n')
+    const __output: string[] = []
+    const code = $jsCode
 
+    console.log(__input)
+    console.log(code)
     try {
-      eval($jsCode);
+      eval(code);
     } catch (e) {
       console.error(e);
     }
-    outputStr = output.join('\n')
+    outputStr = __output.join('\n')
   }
 </script>
 

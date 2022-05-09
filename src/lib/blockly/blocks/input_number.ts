@@ -19,7 +19,7 @@ Python['io_input_number'] = function() {
 
 const Js = Blockly['JavaScript']
 Js['io_input_number'] = function() {
-  const getline = '(input.shift())?.trim()'
+  const getline = '(__input.shift())?.trim()'
   const code = `parseInt(${getline}, 10)`;
   return [code, Js.ORDER_NONE];
 }
